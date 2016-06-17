@@ -1,0 +1,6 @@
+pluginname=eAufgabenModels
+pluginclassname=EAufgabenModelsPlugin
+origin=elan-ev
+version=1.0
+studipMinVersion=3.1
+studipMaxVersion=3.5

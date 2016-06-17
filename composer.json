@@ -1,0 +1,21 @@
+{
+    "name": "elan-ev/studip-plugin-eaufgaben-models",
+    "description": "TODO",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "luniki",
+            "email": "studip+plugins@luniki.de"
+        }
+    ],
+    "config": {
+        "vendor-dir": "composer_modules"
+    },
+    "require": {
+    },
+    "autoload": {
+        "psr-4": {
+            "eAufgaben\\": "models/"
+        }
+    }
+}
