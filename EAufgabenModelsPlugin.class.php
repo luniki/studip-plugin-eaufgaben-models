@@ -1,7 +1,5 @@
 <?php
 
-require_once 'composer_modules/autoload.php';
-
 /**
  * EAufgabenModelsPlugin.class.php
  *
@@ -14,5 +12,9 @@ require_once 'composer_modules/autoload.php';
 class EAufgabenModelsPlugin extends StudIPPlugin implements SystemPlugin {
     public function __construct() {
         parent::__construct();
+
+        if (!class_exists('eAufgaben\\DB\\Task')) {
+            require_once 'composer_modules/autoload.php';
+        }
     }
 }
