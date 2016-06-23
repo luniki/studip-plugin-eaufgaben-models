@@ -1,6 +1,15 @@
 <?php
 namespace eAufgaben\DB;
 
+# CREATE TABLE IF NOT EXISTS `eauf_tests` (
+#     `id` INT(11) NOT NULL AUTO_INCREMENT,
+#     `title` VARCHAR(255) NOT NULL,
+#     `description` TEXT NOT NULL,
+#     `user_id` CHAR(32) NOT NULL,
+#     `created` TIMESTAMP NOT NULL,
+#     `changed` TIMESTAMP NOT NULL,
+#     `options` TEXT NOT NULL,
+#     PRIMARY KEY (`id`));
 
 /**
  * eAufgaben conforming test definition
@@ -21,6 +30,11 @@ class Test extends \SimpleORMap
         $config['belongs_to']['owner'] = array(
             'class_name'  => '\\User',
             'foreign_key' => 'user_id');
+
+        $config['has_many']['assignments'] = array(
+            'class_name' => 'eAufgaben\\DB\\Assignment',
+            'assoc_foreign_key' => 'test_id'
+        );
 
         $config['serialized_fields']['options'] = 'JSONArrayObject';
 
