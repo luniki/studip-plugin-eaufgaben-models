@@ -4,3 +4,4 @@ origin=elan-ev
 version=1.0
 studipMinVersion=3.1
 studipMaxVersion=3.5
+dbscheme=sql/install.sql
